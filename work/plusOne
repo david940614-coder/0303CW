@@ -1,0 +1,20 @@
+def plusOne(digits):
+    # 步驟 1: 取得數組的長度
+    n = len(digits)
+
+    # 步驟 2: 從最右邊的位數開始處理
+    for i in range(n - 1, -1, -1):  # 這裡我們從最右邊的位數開始遍歷
+        if digits[i] < 9:
+            # 如果當前位數小於 9，我們可以直接加 1 並返回結果
+            digits[i] += 1
+            return digits  # 立即返回結果，結束函數
+        
+        # 如果當前位數是 9，則進位，將該位設為 0
+        digits[i] = 0
+
+    # 步驟 3: 如果循環結束，表示所有位數都是 9，則需要在最前面新增一個 1
+    return [1] + digits  # 新增一個 1，並返回新的數字
+
+# 範例測試
+print(plusOne([9, 9, 9]))  
+print(plusOne([1,5,6]))
