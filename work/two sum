@@ -1,0 +1,19 @@
+def twoSum(nums, target):              # 定義一個函式 twoSum，輸入為數字陣列 nums 和目標值 target
+    num_dict = {}                      # 建立一個空的字典，用來存放「數字 : 索引(index)」
+
+    for i, num in enumerate(nums):     # 使用 enumerate 依序取得陣列中的「索引 i」和「數值 num」
+        complement = target - num      # 計算另一個需要的數字 = 目標值 - 目前的數字
+
+        if complement in num_dict:     # 檢查需要的數字是否已經存在字典中
+            return [num_dict[complement], i]   # 如果存在，回傳該數字的索引與目前索引
+
+        num_dict[num] = i              # 如果不存在，就把目前數字和索引存入字典
+
+
+# ===== 主程式測試 =====
+nums = [2, 7, 11, 15]                  # 建立一個整數陣列
+target = 9                             # 設定目標值
+
+result = twoSum(nums, target)          # 呼叫 twoSum 函式找出兩個相加等於 target 的索引
+
+print("答案索引為:", result)            # 印出結果
