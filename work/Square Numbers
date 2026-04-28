@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int a, b;
+    
+    // 題目通常要求讀到 a=0, b=0 為止
+    while (cin >> a >> b && (a != 0 || b != 0)) {
+        
+        // 算出 a 的根 (使用 ceil 確保從大於等於 a 的第一個整數開始)
+        int start = ceil(sqrt(a));
+        
+        // 算出 b 的根 (使用 floor 確保到小於等於 b 的最後一個整數結束)
+        int end = floor(sqrt(b));
+        
+        // 如果 start 比 end 大，代表區間內沒有平方數
+        if (start > end) {
+            cout << 0 << endl;
+        } else {
+            cout << end - start + 1 << endl;
+        }
+    }
+    
+    return 0;
+}
