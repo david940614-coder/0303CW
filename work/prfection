@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+#include <iomanip>
+
+using namespace std;
+
+void solve() {
+    int n;
+    cout << "PERFECTION OUTPUT" << endl; // 題目要求的表頭
+    
+    while (cin >> n && n != 0) {
+        vector<int> factors;
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                factors.push_back(i);
+                if (i * i != n && i != 1) { // 避免重複加入以及將n本身排除
+                    factors.push_back(n / i);
+                }
+            }
+        }
+        
+        // 計算所有真因數的總和
+        int sum = 0;
+        for (int f : factors) sum += f;
+        
+        // 輸出格式：數字佔5個字元，後接兩個空白，再接類別
+        cout << setw(5) << n << "  ";
+        if (sum == n) cout << "PERFECT" << endl;
+        else if (sum > n) cout << "ABUNDANT" << endl;
+        else cout << "DEFICIENT" << endl;
+    }
+    cout << "END OF OUTPUT" << endl; // 題目要求的結尾
+}
+
+int main() {
+    solve();
+    return 0;
+}
