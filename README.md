@@ -4,7 +4,7 @@
 
 Hello! My name is David Chen.
 
-I am currently studying in the Department of Computer Science and Information Engineering at Providence University. I am interested in programming, artificial intelligence, and software development. Through coursework and personal projects, I continuously improve my programming skills and problem-solving abilities.
+I am currently studying in the Department of Computer Science at Providence University. I am interested in programming, artificial intelligence, and software development. Through coursework and personal projects, I continuously improve my programming skills and problem-solving abilities.
 
 ---
 
@@ -17,27 +17,17 @@ This repository contains the practical projects and assignments completed during
 Project contents include:
 
 - Basic Programming Exercises
-- Data Structures
 - Algorithms
 - Competitive Programming Practice
 - Artificial Intelligence Applications
-- Image Classification Projects
 
 ---
 
 ## 🛠 Programming Languages
 
 ### Python
-- Data Analysis
-- Machine Learning
-- Deep Learning (PyTorch)
-- Image Processing
 
 ### C++
-- Data Structures
-- Algorithms
-- Object-Oriented Programming
-- Competitive Programming
 
 ---
 
@@ -63,6 +53,6 @@ Project contents include:
 
 **David Chen (陳冠中)**
 
-Department of Computer Science and Information Engineering
+Department of Computer Science 
 
 Providence University
